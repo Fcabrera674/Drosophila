@@ -58,10 +58,44 @@ Ahora que tenemos la base de datos local creada vamos a realizar un blastn con n
 
 ```
 blastn -query fam_dro.fasta -db GCA_021224005.1_ASM2122400v1_genomic.fna -task blastn -out resultado_drosomicinas.txt
-#el query en este caso viene a ser lo que queremos buscar y db en donde lo queremos buscar task especificamos la tarea y out en donde
+#el query en este caso viene a ser lo que queremos buscar, db en donde lo queremos buscar, task especificamos la tarea y out en donde
 #se almacena el resultado
 ```
+Ahora dispone de un archivo que contiene todas las alineaciones con el genoma de D.setifemur, puede visualizarlo con ```more```, ```less``` o con
+un editor de texto gedit.
 
+En nuestro archivo buscaremos el alineamiento para drs, en donde, podemos visualizar lo siguiente: 
+```
+Query= NM_079177.4 Drosophila melanogaster drosomycin (Drs), mRNA
+
+Length=387
+                                                                      Score     E
+Sequences producing significant alignments:                          (Bits)  Value
+
+JAJJHY010008789.1 Drosophila setifemur isolate BGI-SZ-2011a scaff...  201     1e-50
+JAJJHY010001290.1 Drosophila setifemur isolate BGI-SZ-2011a scaff...  42.8    0.007
+JAJJHY010003831.1 Drosophila setifemur isolate BGI-SZ-2011a scaff...  37.4    0.32 
+JAJJHY010010789.1 Drosophila setifemur isolate BGI-SZ-2011a scaff...  36.5    1.1  
+JAJJHY010008598.1 Drosophila setifemur isolate BGI-SZ-2011a scaff...  36.5    1.1  
+JAJJHY010004047.1 Drosophila setifemur isolate BGI-SZ-2011a scaff...  36.5    1.1  
+JAJJHY010010898.1 Drosophila setifemur isolate BGI-SZ-2011a scaff...  35.6    1.1
+```
+Podemos observar que existen una gran cantidad de alineamientos y también podemos observar en E value este valor respresenta una estimación 
+probabilísitca de que un alineamiento de 2 secuencias sea un resultado aleatorio. Mientras el E-value sea más cercano a cero se considera mejor. 
+
+## Obtención del contig con mejor E-value
+Para esta parte usaremos la herramemienta seqret del paquete emboos. Para instalar emboss puede usar:
+```
+sudo apt install emboss
+#directamente del shell linux
+```
+```
+# en el caso que se genere problemas de instalación y dispone del software conda puede realizar lo siguiente:
+# crear ambiente emboss
+conda create -n emboss
+#instalar emboss
+conda install -c "bioconda/label/cf201901" emboss 
+```
 
 
 
