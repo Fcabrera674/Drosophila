@@ -31,8 +31,18 @@ En este proyecto se usará los siguientes datos:
 
 ## Presencia de secuencias 
 Para esta parte usaremos el software de blastn el cual lo descargaremos de la siguiente manera:
-```sudo apt-get update```
+
+```sudo apt-get update``` 
 ```sudo apt-get install ncbi-blast+```
+En primer lugar, es necesario que se encuentre en la carpeta de trabajo en donde están almacenados todos sus datos. A partir de este momento es necesario el uso del shell de
+Linux. 
+
+```
+#este comando nos permite crear una base de datos con el genoma de D. sulfurigaster
+makeblastdb -in GCA_021224005.1_ASM2122400v1_genomic.fna -dbtype nucl
+# aqui especificamos que el genoma esta en nucleótidos
+```
+
 
 
 
