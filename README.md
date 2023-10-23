@@ -31,8 +31,8 @@ En este proyecto se usará los siguientes datos:
 
 ## Presencia de secuencias 
 Para esta parte usaremos el software de blastn el cual lo descargaremos de la siguiente manera:
-```sudo apt-get update
-   sudo apt-get install ncbi-blast+```
+```sudo apt-get update```
+```sudo apt-get install ncbi-blast+```
 
 
 
