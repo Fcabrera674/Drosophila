@@ -29,6 +29,18 @@ En este proyecto se usará los siguientes datos:
   
 ```curl -OJX GET "https://api.ncbi.nlm.nih.gov/datasets/v2alpha/genome/accession/GCA_021224005.1/download?include_annotation_type=GENOME_FASTA,GENOME_GFF,RNA_FASTA,CDS_FASTA,PROT_FASTA,SEQUENCE_REPORT&filename=GCA_021224005.1.zip" -H "Accept: application/zip"```
 
+Ahora que tenemos nuestros datos en un directorio o carpeta podemos visualizarlos para ver su contenido, para el genoma solo se visualizarán las 10 primeras líneas y 
+también se contará cuantas secuencias presenta el genoma:
+ ```
+#podemos notar en este comando que pedimos las 10 primeras líneas del genoma y podemos observar que las secuencias son de nucleótidos
+head -n10 GCA_021224005.1_ASM2122400v1_genomic.fna
+```
+```
+# para contar secuencias de archivo fasta usamos
+grep -c '>' GCA_021224005.1_ASM2122400v1_genomic.fna
+# el resultado nos da 11180
+``` 
+
 ## Presencia de secuencias 
 Para esta parte usaremos el software de blastn el cual lo descargaremos de la siguiente manera:
 
