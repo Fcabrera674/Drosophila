@@ -52,8 +52,16 @@ Linux.
 ```
 #este comando nos permite crear una base de datos con el genoma de D. sulfurigaster
 makeblastdb -in GCA_021224005.1_ASM2122400v1_genomic.fna -dbtype nucl
-# aqui especificamos que el genoma esta en nucleótidos
+# dbtype aqui especificamos que el genoma esta en nucleótidos
 ```
+Ahora que tenemos la base de datos local creada vamos a realizar un blastn con nuestro archivo fam_dro.fasta
+
+```
+blastn -query fam_dro.fasta -db GCA_021224005.1_ASM2122400v1_genomic.fna -task blastn -out resultado_drosomicinas.txt
+#el query en este caso viene a ser lo que queremos buscar y db en donde lo queremos buscar task especificamos la tarea y out en donde
+#se almacena el resultado
+```
+
 
 
 
