@@ -96,6 +96,16 @@ conda create -n emboss
 #instalar emboss
 conda install -c "bioconda/label/cf201901" emboss 
 ```
+Si desea instalar conda puede utilizar el siguiente video guía (https://www.youtube.com/watch?v=QJsyqy0eKBE).
+
+Cuando tengamos instalado emboss realizaremos lo siguiente:
+
+```
+seqret -sequence GCA_021224005.1_ASM2122400v1_genomic.fna:JAJJHY010008789.1
+# aqui necesitamos el archivo fasta original del genoma y el nombre del contig o scaffold que tiene el mejor e-value en este caso
+# el nombre del contig es JAJJHY010008789.1
+```
+
 
 
 
