@@ -17,8 +17,12 @@ es identificar la presencia de esta familia de genes en el grupo setimefur, espe
 En este proyecto se usará los siguientes datos:
 * Secuencias de referencia
   En este caso se usara las secuencias nucleótidicas de D. melanogaster correspondientes a drs, dro2, dro3, dro4, dro5, dro6.
+  Importante: en el inicio podra encontrar un archivo el cual contiene todas la secuencias de la proteina drosomicina el nombre es fam_dro.fasta
 * Genoma problema
   Nuestro genoma problema es el de D. setifemur especie en la cual no existe documentada la presencia de esta familia de genes.
+  Este genoma puede ser descargado de la base de datos del NCBI con el código de acceso siguiente GCA_021224005.1 o pude usar el siguiente comando
+  en ubuntu:
+curl -OJX GET "https://api.ncbi.nlm.nih.gov/datasets/v2alpha/genome/accession/GCA_021224005.1/download?include_annotation_type=GENOME_FASTA,GENOME_GFF,RNA_FASTA,CDS_FASTA,PROT_FASTA,SEQUENCE_REPORT&filename=GCA_021224005.1.zip" -H "Accept: application/zip"
 
   
 
