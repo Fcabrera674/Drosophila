@@ -80,11 +80,11 @@ JAJJHY010008598.1 Drosophila setifemur isolate BGI-SZ-2011a scaff...  36.5    1.
 JAJJHY010004047.1 Drosophila setifemur isolate BGI-SZ-2011a scaff...  36.5    1.1  
 JAJJHY010010898.1 Drosophila setifemur isolate BGI-SZ-2011a scaff...  35.6    1.1
 ```
-Podemos observar que existen una gran cantidad de alineamientos y también podemos observar en E value este valor respresenta una estimación 
+Podemos observar que existen una gran cantidad de alineamientos y también podemos observar una columna con el nombre E value, este valor respresenta una estimación 
 probabilísitca de que un alineamiento de 2 secuencias sea un resultado aleatorio. Mientras el E-value sea más cercano a cero se considera mejor. 
 
 ## Obtención del contig con mejor E-value
-Para esta parte usaremos la herramemienta seqret del paquete emboos. Para instalar emboss puede usar:
+Para esta parte usaremos la herramienta seqret del paquete emboss. Para instalar emboss puede usar:
 ```
 sudo apt install emboss
 #directamente del shell linux
@@ -101,7 +101,11 @@ Si desea instalar conda puede utilizar el siguiente video guía (https://www.you
 Cuando tengamos instalado emboss realizaremos lo siguiente:
 
 ```
+#cuando corra el comando se generará una ventana que le pide ingresar un nombre nuevo o mantener el mismo si
+# si desea puede cambiarlo
+
 seqret -sequence GCA_021224005.1_ASM2122400v1_genomic.fna:JAJJHY010008789.1
+
 # aqui necesitamos el archivo fasta original del genoma y el nombre del contig o scaffold que tiene el mejor e-value en este caso
 # el nombre del contig es JAJJHY010008789.1
 ```
