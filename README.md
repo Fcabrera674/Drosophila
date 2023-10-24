@@ -115,5 +115,6 @@ seqret -sequence GCA_021224005.1_ASM2122400v1_genomic.fna:JAJJHY010008789.1
 
 
 
+
   
 
