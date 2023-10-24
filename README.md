@@ -82,6 +82,8 @@ JAJJHY010010898.1 Drosophila setifemur isolate BGI-SZ-2011a scaff...  35.6    1.
 ```
 Podemos observar que existen una gran cantidad de alineamientos y también podemos observar una columna con el nombre E value, este valor respresenta una estimación 
 probabilísitca de que un alineamiento de 2 secuencias sea un resultado aleatorio. Mientras el E-value sea más cercano a cero se considera mejor. 
+# Opcional 
+En este caso si deseamos realizar una comparación más detallada, en donde, podamos observar secuencias agua arriba como agua abajo podemos realizar los siguintes dos procedimientos: 
 
 ## Obtención del contig con mejor E-value
 Para esta parte usaremos la herramienta seqret del paquete emboss. Para instalar emboss puede usar:
@@ -109,6 +111,27 @@ seqret -sequence GCA_021224005.1_ASM2122400v1_genomic.fna:JAJJHY010008789.1
 # aqui necesitamos el archivo fasta original del genoma y el nombre del contig o scaffold que tiene el mejor e-value en este caso
 # el nombre del contig es JAJJHY010008789.1
 ```
+## Alineación gráfica (en caso de querer hacer una busqueda más a detalle)
+Para esta parte es necesario descargar a su vez los documentos drs.fasta, dro2.fasta, dro3.fasta, dro4.fasta, dro5.fasta y dro6.fasta. Estos 
+archivos corresponden a la familia de genes de la drosomicina de D. melanogaster. Es necesario que tenga todos los docuementos en su directorio de trabajo.
+
+Para este punto debemos utilizar el software de dotter, esta herramienta nos permitirá visualizar de manera gráfica una comparación de secuencias, en donde, 
+podemos encontrar regiones de similitud u homología. Para instalar dotter puede utilizar el siguiente comando: 
+
+```sudo apt install dotter```
+En un inicio necesitamos generar nuestro gráfico por medio del terminal usando el siguiente comando:
+
+```dotter -b drs drs.fasta contig_drs.fasta
+# la opcion b genera el gráfico y lo almacena 
+```
+Para visualizar el gráfico cambiamos la opción anterior por l:
+
+```dotter -l drs drs.fasta contig_drs.fasta```
+
+
+
+
+
 
 
 
